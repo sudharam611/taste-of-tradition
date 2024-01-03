@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Quicksand:wght@400;500;600;700&display=swap");
+
+:root {
+  /*--------FONT AND TYPOGRAPHY----------*/
+  --heading-font: "Bebas Neue", sans-serif;
+  --sub-heading-font: "Kaushan Script", cursive;
+  --body-font: "Quicksand", sans-serif;
+  --primary-color: #ff9800;
+  --primary-opacity-color: rgba(255, 153, 0, 0.3);
+  --primary-light: #ffb74d;
+  --primary-dark: #e68900;
+  --light: #f1f8ff;
+  --dark: #000000;
+  --text-color: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  font-family: var(--body-font);
+  color: var(--light);
+  background-color: var(--dark);
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  color: rgba(255, 255, 255, 0.6);
+  height: 10px;
+  width: 5px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.nav-btn,
+.main-btn {
+  color: var(--light);
+  outline: none !important;
+  background-color: var(--primary-dark);
+  transition: all 0.3s;
+}
+.nav-btn:hover,
+.main-btn:hover {
+  color: var(--light);
+  background-color: var(--primary-light);
+}
+/*---------NAVIGATION------------*/
+
+.navbar .logo-img {
+  height: 50px;
+  width: 50px;
+}
+.navbar span {
+  font-size: 1.4rem;
+  color: var(--light);
+}
+.navbar-dark .navbar-nav .nav-link {
+  position: relative;
+  margin-left: 1.5rem;
+  text-align: start;
+  padding: 25px 0;
+  color: var(--light) !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  outline: none;
+  transition: 0.3s;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--primary-dark) !important;
+}
+@media (min-width: 992px) {
+  .navbar-dark {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: transparent !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .navbar-dark .navbar-collapse {
+    margin-top: 15px;
+    border-top: 1px solid rgba(256, 256, 265, 0.1);
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 20px 0;
+    margin-left: 0;
+  }
+  .navbar-toggler {
+    outline: none;
+    border: none;
+  }
+  .nav-btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .navbar-brand h1 span {
+    font-size: 0.8rem !important;
+  }
+  .navbar .logo-img {
+    height: 50px;
+    width: 50px;
+  }
+  .navbar-toggler .fa-bars {
+    font-size: 1rem !important;
+    padding: 1rem;
+  }
+}
+@media (max-width: 380px) {
+  .navbar-brand h1 span {
+    font-size: 0.8rem !important;
+  }
+  .navbar .logo-img {
+    height: 30px;
+    width: 30px;
+  }
+  .navbar-toggler .fa-bars {
+    font-size: 0.8rem !important;
+    padding: 0.5rem;
+  }
+}
+/*---------HERO SECTION------------*/
+.hero-header {
+  background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("../images/heroBgImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero-heading {
+  font-family: var(--heading-font);
+}
+.heading-highlight {
+  color: var(--primary-dark);
+}
+.hero-header img {
+  animation: imgRotate 50s linear infinite;
+}
+
+@keyframes imgRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*---------SERVICE SECTION------------*/
+.service-section {
+  background-color: var(--primary-opacity-color);
+}
+.fa {
+  color: var(--primary-color) !important;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.service-card {
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+.service-card:hover {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+  background-color: var(--primary-dark);
+  color: var(--light);
+}
+
+/*---------ABOUT SECTION------------*/
+.about-img {
+  height: 280px;
+  object-fit: cover;
+  overflow-clip-margin: unset;
+}
+.design-img {
+  height: 200px;
+}
+.sub-heading {
+  color: var(--primary-color) !important;
+  font-family: var(--sub-heading-font);
+}
+.main-heading {
+  font-family: var(--heading-font);
+}
+.main-heading span {
+  color: var(--primary-color);
+}
+.number {
+  color: var(--primary-color) !important;
+}
+.border-start {
+  /* color: var(--primary-color) !important; */
+}
+.border-start {
+  border-left-color: var(--primary-color) !important;
+}
+
+/*---------MENU SECTION------------*/
+.nav-pills .nav-item .active {
+  border-bottom: 2px solid var(--primary-color);
+}
+.sub {
+  color: var(--light) !important;
+}
+.main {
+  color: var(--primary-color) !important;
+}
+
+/*---------BOOKING SECTION------------*/
+.video {
+  position: relative;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+input::placeholder,
+textarea::placeholder,
+label {
+  color: rgba(0, 0, 0, 0.7) !important;
+  font-weight: 700 !important;
+  position: relative;
+  z-index: 100000;
+}
+
+/*---------OUR TEAM SECTION------------*/
+.team-card {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+  height: calc(100% - 48px);
+  transition: 0.5s;
+}
+.team-card img {
+  width: 100%;
+  object-fit: cover;
+  overflow-clip-margin: unset;
+  transition: 0.5s;
+}
+.team-card:hover img {
+  transform: scale(1.1);
+}
+.team-card:hover {
+  height: 100%;
+}
+.team-card .btn {
+  border-radius: 40px 40px 0 0;
+}
+
+/*---------TESTIMONIAL SECTION------------*/
+.testimonial-item img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow-clip-margin: unset;
+}
+.fa-quote-left {
+  background: none !important;
+}
+
+/*---------FOOTER------------*/
+footer .fa-solid,
+.fa-brands {
+  color: var(--primary-color) !important;
+}
+footer .highlight {
+  color: var(--primary-color);
+}
+footer .btn-link {
+  text-decoration: none;
+  color: var(--light) !important;
+}
