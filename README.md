@@ -5,7 +5,7 @@ Taste of Tradition is a hotel website where users can check details about the ho
 - HTML
 - CSS
 - Bootstrap
-- Javascipt
+- Javascript
 
 ## Description
 Taste of Tradition is a hotel website where users can check details about the hotel, its menu and can book a table.
